@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapache
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myapache
+  template:
+    metadata:
+      labels:
+        app: myapache
+    spec:
+      containers:
+      - name: myapache
+        image: httpd
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
