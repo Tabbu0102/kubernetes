@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: myapp2
+  name: myapp
 spec:
   containers:
-    - name: alpine
-      image: alpine:latest
+    - name: myapp
+      image: nginx
       ports:
 
         - containerPort: 80
+
