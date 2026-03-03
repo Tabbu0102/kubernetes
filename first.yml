@@ -1,11 +1,10 @@
 apiVersion: v1
 kind: Pod
-metadata:
-  name: mynginx
-  labels:
-    app: myginx
-    tier: backend
+metadata: 
+  name: myapp
 spec:
   containers:
-    - name: mynginx
-      image: nginx:perl
+    - name: alpine
+      image: alpine:latest
+      ports:
+        - containerPort: 80
